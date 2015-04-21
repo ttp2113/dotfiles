@@ -19,14 +19,16 @@ export PS1="\[$(tput setaf 3)\]\D{%m/%d %T} [\u@\h: \[$(tput setaf 6)\]\w\[$(tpu
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
+HISTIGNORE="&:ls:cd ~:cd ..:[bf]g:exit:h:history"
  
 # append to the history file, don't overwrite it
 shopt -s histappend
  
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTFILESIZE="300000"
+HISTSIZE="100000"
  
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -55,21 +57,6 @@ man() {
  
 # enable color support of ls and also add handy aliases
 export CLICOLOR=1
-alias ls='ls -G'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
- 
-# some more ls aliases
-alias ll='ls -lFh'
-alias la='ls -A'
-alias l='ls -CF'
- 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
