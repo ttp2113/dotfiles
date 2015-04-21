@@ -29,11 +29,11 @@ done
 # unauthenticated ldap search | Usage: unldap [uni]
 # # Ensure in new installs that ldap.conf points to the right cert
 allldap() {
-	ldapsearch -x -H ldaps://ldap.columbia.edu:636 -LLL -b "ou=People,o=Columbia University, c=us" "(uid=$1)"
+  ldapsearch -x -H ldaps://ldap.columbia.edu:636 -LLL -b "ou=People,o=Columbia University, c=us" "(uid=$1)"
 }
 #
 unldap() {
-	ldapsearch -x -H ldaps://ldap.columbia.edu:636 -LLL -b "ou=People,o=Columbia University, c=us" "(uid=$1)" | grep -e "cn:" -e "uni:" -e "ou:" -e "title:"
+  ldapsearch -x -H ldaps://ldap.columbia.edu:636 -LLL -b "ou=People,o=Columbia University, c=us" "(uid=$1)" | grep -e "cn:" -e "uni:" -e "ou:" -e "title:"
  }
 #
 vimdecrypt() { gpg -d "$1" | vim - -n -i "NONE" "+set filetype=$2"; }
