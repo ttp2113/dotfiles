@@ -12,19 +12,18 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-# Prompt
-#export PS1="\[$(tput setaf 1)\]┌─╼ \[$(tput setaf 6)\][\u@\h: \w]\n\[$(tput setaf 1)\]\$(if [[ \$? == 0 ]]; then echo \"\[$(tput setaf 1)\]└────╼\"; else echo \"\[$(tput setaf 1)\]└╼\"; fi) \$ \[$(tput setaf 6)\]"
+## Prompt Customization
 export PS1="\[$(tput setaf 3)\]\D{%m/%d %T} [\u@\h: \[$(tput setaf 6)\]\w\[$(tput setaf 3)\]]\n\[$(tput setaf 6)\]\$ \[$(tput setaf 3)\]"
- 
-# don't put duplicate lines in the history. See bash(1) for more options
+
+
+## History Customization 
+# don't put duplicate lines in the history
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
 HISTIGNORE="&:ls:cd ~:cd ..:[bf]g:exit:h:history"
- 
 # append to the history file, don't overwrite it
 shopt -s histappend
- 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+# set history length
 HISTFILESIZE="300000"
 HISTSIZE="100000"
  

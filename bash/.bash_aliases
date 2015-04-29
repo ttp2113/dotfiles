@@ -9,12 +9,11 @@ alias cp='cp -i'
 alias mkdir='mkdir -pv'
 alias mv='mv -i'
 alias vi='vim'
-alias longtail='tail -n 500'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# some more ls aliases
+# some ls aliases
 alias ls='ls -G'
 alias ll='ls -lGFh'
 alias la='ls -A'
@@ -23,17 +22,17 @@ alias l='ls -CF'
 # Sorted Size
 alias ss='du -cks ./* | sort -rn'
 
-# GPG Aliases
+# GPG 
 alias decrypt='gpg -d'
 alias encrypt='gpg -e -u "ttp2113@columbia.edu" -r "ttp2113@columbia.edu" -r "lh2669@columbia.edu"'
 vimdecrypt() { gpg -d "$1" | vim - -n -i "NONE" "+set filetype=$2"; }
 alias vimd="vimdecrypt"
 
-# SOCKS proxy
+# SOCKS proxy for chrome
 alias cuproxy='ssh -D 2345 -C -N maestro'
 
 # Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
+# sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Hostname to SSH Alias
