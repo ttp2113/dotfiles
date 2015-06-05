@@ -1,0 +1,1 @@
+/home/ttp2113/.vim/vim-gnupg/plugin/gnupg.vim
