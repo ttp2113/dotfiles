@@ -15,10 +15,3 @@ export GPG_TTY
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:~/bin
-
-
-### Powerline Config
-#if [ -f /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
-#    source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
-#fi
-### End Powerline
