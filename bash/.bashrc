@@ -40,7 +40,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 ## Prompt Customization
-export PS1="\[$(tput setaf 3)\]\D{%m/%d %T} [\u@\h: \[$(tput setaf 6)\]\w\[$(tput setaf 3)\]]\n\[$(tput setaf 6)\]\$ \[$(tput setaf 3)\]"
+export PS1="\[$(tput setaf 1)\]\D{%m/%d %T} [\u@\h: \[$(tput setaf 6)\]\w\[$(tput setaf 1)\]]\n\[$(tput setaf 6)\]\$ \[$(tput setaf 1)\]"
 
 ## History Customization 
 # don't put duplicate lines in the history
@@ -70,4 +70,3 @@ exit() {
 if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
-
