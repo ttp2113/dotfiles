@@ -1,7 +1,7 @@
 # If not running interactively, don't do anything
 #[ -z "$PS1" ] && return
 
-# Colored prompt
+## Colors
 force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
@@ -11,35 +11,6 @@ if [ -n "$force_color_prompt" ]; then
 	color_prompt=
     fi
 fi
-
-## Prompt Customization
-export PS1="\[$(tput setaf 3)\]\D{%m/%d %T} [\u@\h: \[$(tput setaf 6)\]\w\[$(tput setaf 3)\]]\n\[$(tput setaf 6)\]\$ \[$(tput setaf 3)\]"
-
-
-## History Customization 
-# don't put duplicate lines in the history
-# ... or force ignoredups and ignorespace
-HISTCONTROL=ignoredups:ignorespace
-HISTIGNORE="&:ls:cd ~:cd ..:[bf]g:exit:h:history"
-# append to the history file, don't overwrite it
-shopt -s histappend
-# set history length
-HISTFILESIZE="300000"
-HISTSIZE="100000"
- 
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
-
-# prevent accidental exiting from TMUX -- detach instead
-exit() {
-    if [[ -z $TMUX ]]; then
-        builtin exit
-    else
-        tmux detach
-    fi
-}
 
 # Color man pages
 man() {
@@ -54,8 +25,46 @@ man() {
 			man "$@"
 }
  
-# enable color support of ls and also add handy aliases
+# enable color support
 export CLICOLOR=1
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+## Prompt Customization
+export PS1="\[$(tput setaf 3)\]\D{%m/%d %T} [\u@\h: \[$(tput setaf 6)\]\w\[$(tput setaf 3)\]]\n\[$(tput setaf 6)\]\$ \[$(tput setaf 3)\]"
+
+## History Customization 
+# don't put duplicate lines in the history
+# or force ignoredups and ignorespace
+HISTCONTROL=ignoredups:ignorespace
+HISTIGNORE="&:clear:ls:cd ~:cd ..:[bf]g:exit:h:history"
+# append to the history file, don't overwrite it
+shopt -s histappend
+# set history length
+HISTFILESIZE=300000
+HISTSIZE=100000
+ 
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# prevent accidental exiting from TMUX -- detach instead
+exit() {
+    if [[ -z $TMUX ]]; then
+        builtin exit
+    else
+        tmux detach
+    fi
+}
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then

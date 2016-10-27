@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/ttp2113/temp/d'
 let g:netrw_dirhist_2='/home/ttp2113/.vim'
 let g:netrw_dirhist_3='/Users/ttp2113/Work/source/dotfiles/vim/.vim/colors'
+let g:netrw_dirhist_4='/Users/ttp2113/Dropbox/Tony/Columbia/docs/performance-review-verify'

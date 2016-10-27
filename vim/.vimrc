@@ -3,7 +3,8 @@
 """""""""""""""""""""
 syntax enable
 set background=dark
-colorscheme slate
+set t_Co=256
+colorscheme Dark 
 
 """""""""""""""""""""
 " CUSTOMIZATION
@@ -29,17 +30,3 @@ set scrolloff=3
 set backspace=indent,eol,start
 " display incomplete commands
 set showcmd
-
-"""""""""""""""""""""
-" POWERLINE 
-"""""""""""""""""""""
-set guifont=Inconsolata\ for\ Powerline:h15
-let g:Powerline_symbols = 'fancy'
-set encoding=utf-8
-set t_Co=256
-set fillchars+=stl:\ ,stlnc:\
-set term=xterm-256color
-set termencoding=utf-8
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
-" Always show statusline
-set laststatus=2
