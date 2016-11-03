@@ -1,6 +1,11 @@
 # If not running interactively, don't do anything
 #[ -z "$PS1" ] && return
 
+# Source global definitions first
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
 ## Colors
 force_color_prompt=yes
 
@@ -65,8 +70,3 @@ exit() {
         tmux detach
     fi
 }
-
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-        . /etc/bashrc
-fi
