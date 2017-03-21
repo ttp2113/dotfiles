@@ -51,7 +51,11 @@ unldap() {
 # get external IP address
 alias whatismyip='wget http://ipinfo.io/ip -qO -'
 
-# iLO Consoles 
+# iLO Consoles
+# You neeed a few things for this to work:
+# - Set up /etc/hosts for these addresses or just use localhost in your browser
+# - ssh/config file with defined options for the MFA server and Shrimp/ConnServ
+# - This has been tested with Firefox 50.1.0 and Java (build 1.8.0_73-b02)
 alias macana-console='sudo ssh -L 443:macana-console.cc.columbia.edu:443 -L 23:macana-console.cc.columbia.edu:23 -L 17988:macana-console.cc.columbia.edu:17988 -L 80:macana-console.cc.columbia.edu:80 -L 3389:macana-console.cc.columbia.edu:3389 -L 9300:macana-console.cc.columbia.edu:9300 -L 17990:macana-console.cc.columbia.edu:17990 -L 3002:macana-console.cc.columbia.edu:3002 -N ttp2113@shrimp.cc.columbia.edu'
 alias katana-console='sudo ssh -L 443:katana-console.cc.columbia.edu:443 -L 23:katana-console.cc.columbia.edu:23 -L 17988:katana-console.cc.columbia.edu:17988 -L 80:katana-console.cc.columbia.edu:80 -L 3389:katana-console.cc.columbia.edu:3389 -L 9300:katana-console.cc.columbia.edu:9300 -L 17990:katana-console.cc.columbia.edu:17990 -L 3002:katana-console.cc.columbia.edu:3002 -N ttp2113@shrimp.cc.columbia.edu'
 alias itak-console='sudo ssh -L 443:itak-console.cc.columbia.edu:443 -L 23:itak-console.cc.columbia.edu:23 -L 17988:itak-console.cc.columbia.edu:17988 -L 80:itak-console.cc.columbia.edu:80 -L 3389:itak-console.cc.columbia.edu:3389 -L 9300:itak-console.cc.columbia.edu:9300 -L 17990:itak-console.cc.columbia.edu:17990 -L 3002:itak-console.cc.columbia.edu:3002 -N ttp2113@shrimp.cc.columbia.edu'
