@@ -50,6 +50,7 @@ unldap() {
 
 # get external IP address
 alias whatismyip='wget http://ipinfo.io/ip -qO -'
+alias copymyip="echo $(whatismyip) | pbcopy"
 
 # iLO Consoles 
 alias macana-console='sudo ssh -L 443:macana-console.cc.columbia.edu:443 -L 23:macana-console.cc.columbia.edu:23 -L 17988:macana-console.cc.columbia.edu:17988 -L 80:macana-console.cc.columbia.edu:80 -L 3389:macana-console.cc.columbia.edu:3389 -L 9300:macana-console.cc.columbia.edu:9300 -L 17990:macana-console.cc.columbia.edu:17990 -L 3002:macana-console.cc.columbia.edu:3002 -N ttp2113@shrimp.cc.columbia.edu'
