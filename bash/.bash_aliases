@@ -103,6 +103,10 @@ s3du() {
   aws s3 ls s3://$1 --recursive  | grep -v -E "(Bucket: |Prefix: |LastWriteTime|^$|--)" | awk 'BEGIN {total=0}{total+=$3}END{print total/1024/1024" MB"}'
 }
 
+ansible-role-init() {
+  for dir in tasks handlers files default vars templates; do mkdir $dir; done
+}
+
 # iLO Consoles
 # You neeed a few things for this to work:
 # - Set up /etc/hosts for these addresses or just use localhost in your browser
