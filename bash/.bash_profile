@@ -6,7 +6,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 if [ -f ~/.bashrc ]; then
-        . ~/.bashrc
+  . ~/.bashrc
 fi
 
 # User specific environment and startup programs
