@@ -6,7 +6,7 @@ set t_Co=256
 let iterm_profile = $ITERM_PROFILE
 if iterm_profile == "light"
     set background=light
-    colorscheme darkzen
+    colorscheme morning
 else
     set background=dark
     colorscheme Dark
