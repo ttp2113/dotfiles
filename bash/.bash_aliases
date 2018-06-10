@@ -107,6 +107,13 @@ ansible-role-init() {
   for dir in tasks handlers files default vars templates; do mkdir $dir; done
 }
 
+# dynamically switch iterm profiles
+# Usage:  theme-switch light
+#         theme-switch dark
+theme-switch () {
+  echo -e "\033]50;SetProfile=$1\a"; export ITERM_PROFILE=$1;
+}
+
 # iLO Consoles
 # You neeed a few things for this to work:
 # - Set up /etc/hosts for these addresses or just use localhost in your browser

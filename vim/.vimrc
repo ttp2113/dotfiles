@@ -2,9 +2,15 @@
 " COLOR
 """""""""""""""""""""
 syntax enable
-set background=dark
 set t_Co=256
-colorscheme Dark 
+let iterm_profile = $ITERM_PROFILE
+if iterm_profile == "light"
+    set background=light
+    colorscheme darkzen
+else
+    set background=dark
+    colorscheme Dark
+endif
 
 """""""""""""""""""""
 " CUSTOMIZATION
