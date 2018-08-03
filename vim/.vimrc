@@ -36,3 +36,5 @@ set scrolloff=3
 set backspace=indent,eol,start
 " display incomplete commands
 set showcmd
+" transparent background
+hi Normal guibg=NONE ctermbg=NONE
