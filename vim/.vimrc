@@ -3,7 +3,7 @@
 """""""""""""""""""""
 syntax enable
 set t_Co=256
-let iterm_profile = $ITERM_PROFILE
+let iterm_profile = $XMODIFIERS 
 if iterm_profile == "light"
     set background=light
     colorscheme morning

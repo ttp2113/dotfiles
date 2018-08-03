@@ -9,6 +9,10 @@ fi
 ## Colors
 force_color_prompt=yes
 
+# Pass color profile onto SSH without custom sshd_config
+XMODIFIERS=$ITERM_PROFILE
+export XMODIFIERS
+
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	color_prompt=yes
