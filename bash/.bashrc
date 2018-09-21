@@ -74,3 +74,6 @@ exit() {
         tmux detach
     fi
 }
+
+# Terraform autocompletion
+complete -C /usr/local/Cellar/terraform/0.11.7/bin/terraform terraform
