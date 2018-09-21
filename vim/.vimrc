@@ -1,4 +1,9 @@
 """""""""""""""""""""
+" PATHOGEN
+"""""""""""""""""""""
+execute pathogen#infect()
+
+"""""""""""""""""""""
 " COLOR
 """""""""""""""""""""
 syntax enable
