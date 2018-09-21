@@ -1,5 +1,4 @@
-"""""""""""""""""""""
-" PATHOGEN
+""""""""""""""""""""" " PATHOGEN
 """""""""""""""""""""
 execute pathogen#infect()
 
@@ -43,3 +42,12 @@ set backspace=indent,eol,start
 set showcmd
 " transparent background
 hi Normal guibg=NONE ctermbg=NONE
+
+
+"""""""""""""""""""""
+" TERRAFORM SYNTAX 
+"""""""""""""""""""""
+let g:terraform_align=1
+let g:terraform_fold_sections=1
+let g:terraform_remap_spacebar=1
+let g:terraform_commentstring='//%s'
