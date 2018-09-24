@@ -1,3 +1,7 @@
 [submodule "vim/.vim/bundle/vim-hashicorp-tools"]
 	path = vim/.vim/bundle/vim-hashicorp-tools
 	url = https://github.com/hashivim/vim-hashicorp-tools.git
+
+[submodule "vim/.vim/bundle/vim-gnupg"]
+  path = vim/.vim/bundle/vim-gnupg
+  url = https://github.com/jamessan/vim-gnupg.git
